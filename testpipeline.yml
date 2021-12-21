@@ -1,0 +1,23 @@
+pool:
+  name: Azure Pipelines
+steps:
+- task: 
+        echo ***All Extract Successfull!!!***
+
+        echo ***Starting copying from VM to Repo****
+
+        git config --global user.email "ma.srinivasareddy@yokogawa.com"
+
+        git config --global user.name "M-A-Srinivasa-Reddy"
+
+        git add .
+
+        git commit -m "commited from Production_Temp_Fix branch"
+
+        git remote rm origin
+
+        git remote add origin https://github.com/yokogawaelectric/Production.git
+
+        git push https://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@github.com/yokogawaelectric/Production.git HEAD:Production_Temp
+
+        displayName: 'Push to Repo'

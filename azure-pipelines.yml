@@ -16,4 +16,12 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    git config --global user.email "sugesh.s@hotmail.com"
+    git config --global user.name "sugeshsuseelan"
+    git add .
+    git commit -m "Commited from Production-temp branch"
+    git remote rm origin
+    git remote add origin https://github.com/sugeshsuseelan/Demo.git
+    git push https://github.com/sugeshsuseelan/Demo.git
+    
+  displayName: 'Push to Repo'
